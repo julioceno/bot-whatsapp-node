@@ -1,0 +1,14 @@
+{
+  "name": "bot-whatsapp-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/lucasaugustscode/bot-whatsapp-node.git",
+  "author": "Lucas Augusto <lucasaugustscode@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "whatsapp-web.js": "^1.11.1"
+  }
+}
