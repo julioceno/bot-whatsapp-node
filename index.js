@@ -1,27 +1,20 @@
-const { Client } = require('whatsapp-web.js');
-const client = new Client();
+const qrcode = require('qrcode-terminal')
 
-const message = ['test', 'test2'];
+const { Client } = require('whatsapp-web.js')
+const client = new Client()
 
 client.on('qr', qr => {
-    console.log('QR RECEIVED', qr);
-});
+    qrcode.generate(qr, { small: true })
+})
 
 client.on('ready', () => {
-    console.log('Client is ready !');
-});
+    console.log('Client is ready !')
+})
 
 client.on('message', msg => {
-    for (let i = 0; i < message.length; i++) {
-        if (msg.body == message[i]) {
-            switch (message[i]) {
-                case 'test':
-                    return msg.reply('Chatbot successfully connected !');
-                case 'test2':
-                    return msg.reply('Chatbot working perfectly !');
-            }
-        }
+    if (msg.body.toLowerCase() == 'ping') {
+        return msg.reply('pong')
     }
-});
+})
 
-client.initialize();
+client.initialize()
