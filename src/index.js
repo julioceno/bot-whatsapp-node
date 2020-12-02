@@ -9,9 +9,15 @@ client.on('qr', qr => {
 
 client.on('ready', () => console.log('bot on !'))
 
-// Create the welcome event;
+// Create inbound and outbound events;
 
+client.on('group_join', notification => {
+    console.log('Detectamos um novo usuário no grupo !')
+})
 
+client.on('group_leave', notification => {
+    console.log('Detectamos que um usuário saiu do grupo !')
+})
 
 // Listing creation event (Julio code here);
 //
