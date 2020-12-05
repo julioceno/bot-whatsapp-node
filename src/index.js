@@ -162,8 +162,6 @@ client.on('message', async msg => {
         chat.sendMessage(list)
     }
 
-    console.log(addList[0].toLocaleLowerCase() )
-    console.log(addList[0])
     // Adicionando uma pessoa na lista
     if(addList[0].toLocaleLowerCase() === '!add_list' && addList.length >= 2 ) {
         addList.shift()
