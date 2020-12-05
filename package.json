@@ -6,7 +6,11 @@
   "author": "Lucas Augusto <lucasaugustscode@gmail.com>",
   "license": "MIT",
   "scripts": {
+<<<<<<< HEAD
     "dev": "sucrase-node src/bot.js"
+=======
+    "start": "sucrase-node src/bot.js"
+>>>>>>> master
   },
   "dependencies": {
     "qrcode-terminal": "^0.12.0",
