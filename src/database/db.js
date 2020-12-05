@@ -1,12 +1,12 @@
-const Database = require('sqlite-async')
+import db from 'sqlite-async'
 
-async function execute(db) {
+async function execute(database) {
 
-    return await db.exec(` CREATE TABLE IF NOT EXISTS events(
+    return await database.exec(` CREATE TABLE IF NOT EXISTS events(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             title TEXT,
             participants TEXT
     );`) 
 }
 
-module.exports = Database.open(__dirname + '/database.db.sqlite').then(execute)
+export default db.open(__dirname + '/database.sqlite').then(execute)

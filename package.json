@@ -1,17 +1,19 @@
 {
   "name": "bot-whatsapp-node",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "bot.js",
   "repository": "https://github.com/lucasaugustscode/bot-whatsapp-node.git",
   "author": "Lucas Augusto <lucasaugustscode@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node src/index.js"
+    "dev": "sucrase-node src/bot.js"
   },
   "dependencies": {
     "qrcode-terminal": "^0.12.0",
     "sqlite-async": "^1.1.1",
     "whatsapp-web.js": "^1.11.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "sucrase": "^3.16.0"
+  }
 }

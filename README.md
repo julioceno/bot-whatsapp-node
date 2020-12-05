@@ -10,3 +10,4 @@ yarn add whatsapp-web.js
 ```
 npm install whatsapp-web.js
 ```
+
