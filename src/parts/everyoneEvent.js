@@ -13,7 +13,7 @@ async function everyoneEvent(msg) {
             mentions.push(contact)
             text += `@${participant.id.user} `
         }
-        msg.reply('🎙️ *_Chamando todos os membros para você..._*')
+        msg.reply('🎙️ Chamando todos os membros para você...')
         setTimeout(() => {
             chat.sendMessage(text, { mentions })
         }, 5000);
