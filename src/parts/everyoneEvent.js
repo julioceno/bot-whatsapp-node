@@ -1,8 +1,8 @@
 import client from '../bot'
 
 async function everyoneEvent(msg) {
-    if (msg.body === '/everyone') {
-        const chat = await msg.getChat();
+    if (msg.body == '/everyone') {
+        const chat = await msg.getChat()
 
         let text = ''
         let mentions = []
@@ -11,10 +11,12 @@ async function everyoneEvent(msg) {
             const contact = await client.getContactById(participant.id._serialized)
 
             mentions.push(contact)
-            text += `@${participant.id.user}`
+            text += `@${participant.id.user} `
         }
-
-        chat.sendMessage(text, { mentions })
+        msg.reply('🎙️ *_Chamando todos os membros para você..._*')
+        setTimeout(() => {
+            chat.sendMessage(text, { mentions })
+        }, 5000);
     }
 }
 

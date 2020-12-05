@@ -1,14 +1,8 @@
 import db from 'sqlite-async'
 
-<<<<<<< HEAD
+
 async function execute(database) {
-
-    return await database.exec(` CREATE TABLE IF NOT EXISTS events(
-=======
-async function execute() {
-
-    return await db.exec(` CREATE TABLE IF NOT EXISTS events (
->>>>>>> master
+    return await database.exec(` CREATE TABLE IF NOT EXISTS events (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             title TEXT,
             participants TEXT
